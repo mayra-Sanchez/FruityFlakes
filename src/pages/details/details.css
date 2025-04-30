@@ -1,0 +1,262 @@
+.details-page {
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section 1: Why Choose Fruity Flakes */
+.why-choose-section {
+    margin-bottom: 40px;
+}
+
+.why-choose-section h1 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: 0 auto 20px;
+}
+
+.highlight-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon-placeholder {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.icon-product::before,
+.icon-packaging::before,
+.icon-delivery::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.feature h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Section 2: Founder’s Message */
+.founder-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.founder-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-image {
+    flex: 1;
+}
+
+.image-placeholder {
+    background-color: #e0e0e0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.founder-message {
+    flex: 1;
+    text-align: center;
+}
+
+.founder-message h2 {
+    font-size: 2em;
+    color: #1e90ff;
+    margin-bottom: 15px;
+}
+
+.founder-message p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.signature {
+    font-style: italic;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+/* Responsive Design */
+
+/* Small screens (mobile, up to 768px) */
+@media (max-width: 768px) {
+    .details-page {
+        padding: 10px;
+    }
+
+    /* Section 1 */
+    .why-choose-section h1 {
+        font-size: 1.8em;
+    }
+
+    .intro-text {
+        font-size: 0.95em;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .highlight-text {
+        font-size: 1em;
+    }
+
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .feature h3 {
+        font-size: 1.2em;
+    }
+
+    .feature p {
+        font-size: 0.85em;
+    }
+
+    /* Section 2 */
+    .founder-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder-image {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .image-placeholder {
+        height: 200px;
+    }
+
+    .founder-message {
+        min-width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .founder-message h2 {
+        font-size: 1.5em;
+    }
+
+    .founder-message p {
+        font-size: 0.9em;
+    }
+}
+
+/* Medium screens (tablets, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .details-page {
+        padding: 15px;
+    }
+
+    .why-choose-section h1 {
+        font-size: 2.2em;
+    }
+
+    .intro-text {
+        font-size: 1em;
+    }
+
+    .highlight-text {
+        font-size: 1.1em;
+    }
+
+    .feature {
+        min-width: 200px;
+        max-width: 250px;
+    }
+
+    .founder-image {
+        max-width: 350px;
+    }
+
+    .founder-message {
+        max-width: 450px;
+    }
+
+    .founder-message h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Large screens (desktops, above 1024px) */
+@media (min-width: 1025px) {
+    .details-page {
+        padding: 30px;
+    }
+
+    .why-choose-section h1 {
+        font-size: 2.5em;
+    }
+
+    .intro-text {
+        font-size: 1.1em;
+    }
+
+    .highlight-text {
+        font-size: 1.2em;
+    }
+
+    .feature {
+        max-width: 300px;
+    }
+
+    .founder-image {
+        max-width: 400px;
+    }
+
+    .founder-message {
+        max-width: 800px;
+    }
+}
