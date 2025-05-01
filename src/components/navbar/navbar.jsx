@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './navbar.css';
 import logo from '../../assets/logo-fruity-flakes.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faUser, faShoppingCart, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faShoppingCart, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ const Navbar = () => {
                         {menuOpen && isMobile ? '✖' : '☰'}
                     </button>
                     <button className="location-icon">
-                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                        <FontAwesomeIcon icon={faGlobe} />
                     </button>
                 </div>
 
@@ -48,14 +48,11 @@ const Navbar = () => {
                 </div>
 
                 <div className="right-icons">
-                    <span className="icon">
-                        <FontAwesomeIcon icon={faUser} />
-                    </span>
+                    <button className="location-icon">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                    </button>
                     <span className="icon">
                         <FontAwesomeIcon icon={faShoppingCart} />
-                    </span>
-                    <span className="icon">
-                        <FontAwesomeIcon icon={faSearch} />
                     </span>
                 </div>
             </div>

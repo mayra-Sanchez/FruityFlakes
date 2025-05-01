@@ -3,6 +3,7 @@
     padding: 40px;
     text-align: center;
     background: white;
+    overflow: hidden; /* Importante para que los splash no sobresalgan */
 }
 
 .splash {
@@ -10,23 +11,35 @@
     width: 250px;
     top: 0;
     z-index: 0;
+    transition: all 0.3s ease;
+    opacity: 0.5; /* Asegurar que la opacidad está definida */
 }
+
 .splash.left {
-    left: 0;
+    left: -50px;
+    top: 50px;
 }
+
 .splash.right {
-    right: 0;
+    right: -50px;
+    top: 50px;
 }
 
 .title {
     color: #004AAD;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Aumento el tamaño para mejor visibilidad */
     font-weight: bold;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 15px; /* Añadí un margen inferior */
 }
 
 .subtitle {
     font-weight: 600;
     margin: 15px 0;
+    z-index: 1;
+    position: relative;
+    color: #666; /* Añadí un color gris para el subtítulo */
 }
 
 .description {
@@ -34,14 +47,19 @@
     margin: 0 auto 30px auto;
     font-size: 1rem;
     line-height: 1.5;
+    z-index: 1;
+    position: relative;
+    color: #333; /* Mejor color para la descripción */
 }
 
 .scroll-container {
     display: flex;
     overflow-x: auto;
-    gap: 20px;
+    gap: 50px;
     padding-bottom: 20px;
     scroll-snap-type: x mandatory;
+    z-index: 1;
+    position: relative;
 }
 
 .product-card {
@@ -53,7 +71,12 @@
     padding: 10px;
     background-color: #FFF3AC;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Efecto de hover */
 }
 
 .product-card img {
@@ -65,4 +88,43 @@
 .product-card p {
     font-weight: bold;
     margin-top: 10px;
+}
+
+/* 🔽 Responsive adjustments */
+@media (max-width: 768px) {
+    .splash {
+        width: 120px;
+        opacity: 0.2;
+        top: auto;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .splash.left {
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .splash.right {
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .title {
+        font-size: 1.8rem; /* Ajusté el tamaño del título */
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 1.1rem; /* Mejor tamaño de fuente en móvil */
+    }
+
+    .description {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .product-card {
+        width: 200px;
+    }
 }

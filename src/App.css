@@ -1,35 +1,4 @@
-.section {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Aprovecha las variables de color de index.css */
-#menu { 
-  background-color: #242424; 
-  color: rgba(255, 255, 255, 0.87);
-}
-#details { 
-  background-color: #1a1a1a; 
-  color: rgba(255, 255, 255, 0.87);
-}
-#events { 
-  background-color: #242424; 
-  color: rgba(255, 255, 255, 0.87);
-}
-#contact { 
-  background-color: #1a1a1a; 
-  color: rgba(255, 255, 255, 0.87);
-}
-
-/* Modo claro */
-@media (prefers-color-scheme: light) {
-  #menu, #details, #events, #contact { 
-      background-color: #ffffff; 
-      color: #213547;
+.App {
+    text-align: center;
   }
-}
+  
