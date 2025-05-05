@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import './events.css';
 import splashLeft from '../../assets/splash-left.png';
-import e1 from '../../assets/pics/foto_collage.jpg';
-import e2 from '../../assets/pics/foto_collage.jpg';
-import e3 from '../../assets/pics/foto_collage.jpg';
-import e4 from '../../assets/pics/foto_collage.jpg';
-import e5 from '../../assets/pics/foto_collage.jpg';
-import e6 from '../../assets/pics/foto_collage.jpg';
-import e7 from '../../assets/pics/foto_collage.jpg';
-import e8 from '../../assets/pics/foto_collage.jpg';
+import e1 from '../../assets/pics/dueña.png';
+import e2 from '../../assets/pics/negocio.png';
+import e3 from '../../assets/pics/3.png';
+import e4 from '../../assets/pics/5.png';
+import e5 from '../../assets/pics/2.png';
+import e6 from '../../assets/pics/4.png';
+import e7 from '../../assets/pics/7.png';
+import e8 from '../../assets/pics/6.png';
+import { translations } from '../../components/navbar/language/translations';
 
-const images = [e1, e2, e3, e4, e5, e6, e7, e8];
-
-const Events = () => {
+const Events = ({ selectedLanguage = 'en' }) => {
     const [modalImg, setModalImg] = useState(null);
-    const whatsappText = encodeURIComponent("Hola, estoy interesado en contratar un evento con Fruity Flakes 🍓🎉");
+    const t = translations[selectedLanguage] || translations['en'];
+    
+    // Memoize images array to prevent unnecessary recalculations
+    const images = useMemo(() => [e1, e2, e3, e4, e5, e6, e7, e8], []);
+    
+    // Memoize WhatsApp message
+    const whatsappUrl = useMemo(() => {
+        const message = encodeURIComponent(t.whatsappMessage);
+        return `https://wa.me/573001234567?text=${message}`;
+    }, [t.whatsappMessage]);
 
     const openModal = (img) => setModalImg(img);
     const closeModal = () => setModalImg(null);
@@ -22,21 +30,22 @@ const Events = () => {
     return (
         <div className="events-section">
             <div className="events-left">
-                <h1>FRUITY FLAKES<br />CATERING & EVENTS</h1>
-                <p>
-                    WE BRING THE FRESH, UNIQUE FLAVOURS OF FRUITY FLAKES TO YOUR SPECIAL EVENTS!
-                    OUR CUSTOMISED CATERING SERVICE OFFERS ALL YOUR FAVOURITE TREATS, PERFECT FOR PARTIES, CORPORATE GATHERINGS, AND CELEBRATIONS.
-                    WE TAKE CARE OF EVERY DETAIL SO YOU CAN ENJOY A DELICIOUS AND VIBRANT EXPERIENCE. LET US MAKE YOUR EVENT UNFORGETTABLE!
-                </p>
+                <h1>{t.eventsTitle}</h1>
+                <p>{t.eventsDescription}</p>
                 <a
-                    href={`https://wa.me/573001234567?text=${whatsappText}`}
+                    href={whatsappUrl}
                     className="order-now"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    ORDER NOW
+                    {t.orderNowButton}
                 </a>
-                <img src={splashLeft} alt="splash" className="splash-left" />
+                <img 
+                    src={splashLeft} 
+                    alt={t.splashAlt} 
+                    className="splash-left"
+                    loading="lazy"
+                />
             </div>
 
             <div className="events-right">
@@ -44,9 +53,10 @@ const Events = () => {
                     {images.map((img, index) => (
                         <img
                             src={img}
-                            alt={`event-${index}`}
+                            alt={`${t.eventAlt}-${index}`}
                             key={index}
                             onClick={() => openModal(img)}
+                            loading="lazy"
                         />
                     ))}
                 </div>
@@ -54,36 +64,35 @@ const Events = () => {
 
             {modalImg && (
                 <div className="modal" onClick={closeModal}>
-                    <div className="modal-content">
-                        <img src={modalImg} alt="zoomed" />
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
+                        <span className="close-modal" onClick={closeModal}>&times;</span>
+                        <img src={modalImg} alt={t.zoomedImageAlt} />
                     </div>
                 </div>
             )}
 
             <div className="gift-section">
-                <h2>FRUITY FLAKES GIFTS: SWEET TREATS<br />FOR EVERY OCCASION</h2>
-                <p>
-                    SURPRISE SOMEONE WITH A UNIQUE AND DELICIOUS GIFT! OUR HANDCRAFTED GIFT OPTIONS ARE PERFECT FOR ANY OCCASION—BIRTHDAYS,
-                    ANNIVERSARIES, OR SPECIAL EVENTS. WE CREATE FRESH, PERSONALISED SELECTIONS WITH OUR BEST PRODUCTS, GUARANTEED TO BRIGHTEN
-                    SOMEONE’S DAY. SWEETEN EVERY MOMENT WITH FRUITY FLAKES!
-                </p>
+                <h2>{t.giftTitle}</h2>
+                <p>{t.giftDescription}</p>
 
                 <div className="gift-items">
                     {[1, 2, 3].map((i) => (
                         <div className="gift-card" key={i}>
                             <div className="gift-image-container">
-                                <img src={e1} alt={`gift ${i}`} />
-                                {/* <img src={bow} alt="bow" className="gift-bow" /> */}
+                                <img 
+                                    src={e1} 
+                                    alt={`${t.giftAlt} ${i}`} 
+                                    loading="lazy"
+                                />
                             </div>
-                            <strong>BLA BLA BLA BLA BLA</strong>
-                            <p>BLA BLA BLA BLA BLA BLA BLA</p>
+                            <strong>{t.giftCardTitle}</strong>
+                            <p>{t.giftCardDescription}</p>
                         </div>
                     ))}
                 </div>
             </div>
         </div>
-
     );
 };
 
-export default Events;
+export default React.memo(Events);

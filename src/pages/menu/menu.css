@@ -128,3 +128,218 @@
         width: 200px;
     }
 }
+
+.image-wrapper {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #fff3ac;
+    position: relative;
+}
+
+.product-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    position: absolute;
+}
+
+.product-image.active {
+    opacity: 1;
+}
+
+.product-card button {
+    background-color: #004AAD;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #00337f;
+}
+
+/* Todos los estilos anteriores permanecen igual */
+
+/* Añade estos nuevos estilos para el modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #FFF3AC;
+    border: 5px solid #FFD700;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #004AAD;
+    font-weight: bold;
+}
+
+.modal-image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Reemplaza los estilos actuales del modal-image-wrapper y modal-image con estos: */
+
+.modal-image-wrapper {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #fff3ac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    .modal-image-wrapper {
+        height: 200px;
+    }
+    
+    .modal-image {
+        max-height: 90%;
+        max-width: 90%;
+    }
+}
+
+
+.modal-image.active {
+    opacity: 1;
+}
+
+.modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 74, 173, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+.modal-arrow.left {
+    left: 15px;
+}
+
+.modal-arrow.right {
+    right: 15px;
+}
+
+.modal-info {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.modal-info h2 {
+    color: #004AAD;
+    margin-bottom: 10px;
+}
+
+.modal-price {
+    color: #ff5722;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.modal-description {
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.modal-add-btn {
+    background-color: #004AAD;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.modal-add-btn:hover {
+    background-color: #00337f;
+}
+
+/* Responsive para el modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .modal-image-wrapper {
+        height: 200px;
+    }
+    
+    .modal-info h2 {
+        font-size: 1.3rem;
+    }
+}
