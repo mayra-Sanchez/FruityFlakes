@@ -5,6 +5,9 @@ import delivery from '../../assets/icons/delivery.png';
 import packing from '../../assets/icons/packing.png';
 import e1 from '../../assets/pics/dueña.png';
 import { translations } from '../../components/navbar/language/translations';
+import splashRight from '../../assets/splashes/1.png';
+import splashLeft from '../../assets/splashes/2.png';
+import splashCenter from '../../assets/splashes/3.png';
 
 const Details = ({ selectedLanguage = 'en' }) => {
     // Memoize translations to prevent recalculating on every render
@@ -43,7 +46,10 @@ const Details = ({ selectedLanguage = 'en' }) => {
                 <p className="highlight-text">
                     {t.whyChooseHighlight}
                 </p>
-                <div className="features-container">
+                <div className="features-container splash-container">
+                    <img src={splashLeft} alt={t.splashAlt} className="splash left"/>
+                    <img src={splashCenter} alt={t.splashAlt} className="splash center"/>
+                    <img src={splashRight} alt={t.splashAlt} className="splash right"/>
                     {features.map((feature, index) => (
                         <div className="feature" key={index}>
                             <img
@@ -63,9 +69,9 @@ const Details = ({ selectedLanguage = 'en' }) => {
             <section className="founder-section">
                 <div className="founder-content">
                     <div className="founder-image">
-                        <img 
-                            src={e1} 
-                            alt={t.founderAlt} 
+                        <img
+                            src={e1}
+                            alt={t.founderAlt}
                             className="founder-photo"
                             loading="lazy" // Optimización de carga
                         />

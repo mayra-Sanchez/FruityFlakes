@@ -21,8 +21,8 @@ const Community = ({ selectedLanguage = 'en' }) => {
 
     return (
         <div className="community-page">
-            <img src={splashLeft} alt="decoración izquierda" class="splash left" />
-            <img src={splashRight} alt="decoración derecha" class="splash right" />
+            <img src={splashLeft} alt="decoración izquierda" className="splash left" />
+            <img src={splashRight} alt="decoración derecha" className="splash right" />
             {/* Header Section */}
             <div className="community-header">
                 <h1>{t.communityTitle}</h1>

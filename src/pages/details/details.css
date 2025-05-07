@@ -119,6 +119,40 @@
     color: #ff6347;
 }
 
+.founder-photo {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Splash Images */
+.splash-container {
+    position: relative;
+    margin-top: 40px;
+}
+
+.splash {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: -20px;
+    z-index: -1;
+}
+
+.splash.left {
+    left: 15%;
+}
+
+.splash.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.splash.right {
+    right: 15%;
+}
+
 /* Responsive Design */
 
 /* Small screens (mobile, up to 768px) */
@@ -190,6 +224,25 @@
     .founder-message p {
         font-size: 0.9em;
     }
+
+    /* Splash images */
+    .splash {
+        width: 40px;
+        top: -10px;
+    }
+
+    .splash.left {
+        left: 10%;
+    }
+
+    .splash.center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .splash.right {
+        right: 10%;
+    }
 }
 
 /* Medium screens (tablets, 769px to 1024px) */
@@ -226,6 +279,25 @@
     .founder-message h2 {
         font-size: 1.8em;
     }
+
+    /* Splash images */
+    .splash {
+        width: 50px;
+        top: -15px;
+    }
+
+    .splash.left {
+        left: 12%;
+    }
+
+    .splash.center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .splash.right {
+        right: 12%;
+    }
 }
 
 /* Large screens (desktops, above 1024px) */
@@ -257,11 +329,6 @@
     .founder-message {
         max-width: 800px;
     }
-}
 
-.founder-photo {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 10px;
-    object-fit: cover;
+    /* Splash images use default size */
 }
