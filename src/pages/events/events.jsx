@@ -14,13 +14,14 @@ import e5 from '../../assets/pics/2.png';
 import e6 from '../../assets/regalos/aji.png';
 import e7 from '../../assets/pics/7.png';
 import e8 from '../../assets/pics/6.png';
+import e9 from '../../assets/pics/8.png';
 import { translations } from '../../components/navbar/language/translations';
 
 const Events = ({ selectedLanguage = 'en' }) => {
     const [modalImg, setModalImg] = useState(null);
     const t = translations[selectedLanguage] || translations['en'];
 
-    const images = useMemo(() => [e1, e2, e3, e4, e5, e6, e7, e8], []);
+    const images = useMemo(() => [e1, e2, e3, e8, e4, e6, e7, e5, e9], []);
     const giftImages = useMemo(() => [e2, e4, e6], []);
 
     const whatsappUrl = useMemo(() => {
