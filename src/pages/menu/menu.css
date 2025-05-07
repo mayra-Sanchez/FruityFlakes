@@ -3,7 +3,7 @@
     padding: 40px;
     text-align: center;
     background: white;
-    overflow: hidden; /* Importante para que los splash no sobresalgan */
+    overflow: hidden;
 }
 
 .splash {
@@ -12,7 +12,7 @@
     top: 0;
     z-index: 0;
     transition: all 0.3s ease;
-    opacity: 0.5; /* Asegurar que la opacidad está definida */
+    opacity: 0.5;
 }
 
 .splash.left {
@@ -27,11 +27,11 @@
 
 .title {
     color: #004AAD;
-    font-size: 2.5rem; /* Aumento el tamaño para mejor visibilidad */
+    font-size: 2.5rem;
     font-weight: bold;
     z-index: 1;
     position: relative;
-    margin-bottom: 15px; /* Añadí un margen inferior */
+    margin-bottom: 15px;
 }
 
 .subtitle {
@@ -39,7 +39,7 @@
     margin: 15px 0;
     z-index: 1;
     position: relative;
-    color: #666; /* Añadí un color gris para el subtítulo */
+    color: #666;
 }
 
 .description {
@@ -49,7 +49,7 @@
     line-height: 1.5;
     z-index: 1;
     position: relative;
-    color: #333; /* Mejor color para la descripción */
+    color: #333;
 }
 
 .scroll-container {
@@ -60,6 +60,7 @@
     scroll-snap-type: x mandatory;
     z-index: 1;
     position: relative;
+    height: auto;
 }
 
 .product-card {
@@ -72,11 +73,11 @@
     background-color: #FFF3AC;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-    transform: scale(1.05); /* Efecto de hover */
+    transform: scale(1.01);
 }
 
 .product-card img {
@@ -90,7 +91,6 @@
     margin-top: 10px;
 }
 
-/* 🔽 Responsive adjustments */
 @media (max-width: 768px) {
     .splash {
         width: 120px;
@@ -111,12 +111,12 @@
     }
 
     .title {
-        font-size: 1.8rem; /* Ajusté el tamaño del título */
+        font-size: 1.8rem;
         margin-bottom: 10px;
     }
 
     .subtitle {
-        font-size: 1.1rem; /* Mejor tamaño de fuente en móvil */
+        font-size: 1.1rem;
     }
 
     .description {
@@ -170,9 +170,6 @@
     background-color: #00337f;
 }
 
-/* Todos los estilos anteriores permanecen igual */
-
-/* Añade estos nuevos estilos para el modal */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -202,47 +199,61 @@
 
 .modal-close {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 2rem;
+    top: 10px;
+    right: 10px;
+    background: #FFD700;
+    border: 2px solid #004AAD;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #004AAD;
     font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background-color: #ffca28;
+    transform: scale(1.1);
 }
 
 .modal-image-container {
     position: relative;
     margin-bottom: 20px;
 }
-
-/* Reemplaza los estilos actuales del modal-image-wrapper y modal-image con estos: */
-
 .modal-image-wrapper {
-    width: 100%;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    background: #fff3ac;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #fff3ac;
+    position: relative;
 }
 
 .modal-image {
-    max-height: 100%;
-    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease;
-    position: absolute;
-    width: auto;
-    height: auto;
 }
 
-/* Para dispositivos móviles */
+.modal-image.active {
+    opacity: 1;
+}
+
+
+
 @media (max-width: 768px) {
     .modal-image-wrapper {
         height: 200px;
@@ -252,11 +263,6 @@
         max-height: 90%;
         max-width: 90%;
     }
-}
-
-
-.modal-image.active {
-    opacity: 1;
 }
 
 .modal-arrow {
@@ -328,7 +334,6 @@
     background-color: #00337f;
 }
 
-/* Responsive para el modal */
 @media (max-width: 768px) {
     .modal-content {
         width: 95%;
@@ -341,5 +346,13 @@
     
     .modal-info h2 {
         font-size: 1.3rem;
+    }
+    
+    .modal-close {
+        top: 8px;
+        right: 8px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
     }
 }

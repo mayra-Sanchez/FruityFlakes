@@ -223,7 +223,7 @@ const ProductModal = ({ product, onClose, onAddToCart, closeText, addToCartText,
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <button className="modal-close" onClick={onClose}>{closeText}</button>
+                <button className="modal-close" onClick={onClose}>×</button>
                 
                 <div className="modal-image-container">
                     {product.images.length > 1 && (

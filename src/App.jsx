@@ -51,7 +51,7 @@ function App() {
             </section>
 
             <section id="contact" className="section">
-                <Community></Community>
+                <Community selectedLanguage={selectedLanguage} />
             </section>
 
             <Footer />

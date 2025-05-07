@@ -117,10 +117,6 @@
   transition: transform 0.3s;
 }
 
-.logo:hover {
-  transform: translateX(-50%) scale(1.05);
-}
-
 /* Menú horizontal o vertical */
 .menu-bar {
   display: flex;

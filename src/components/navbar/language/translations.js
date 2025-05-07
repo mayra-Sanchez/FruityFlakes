@@ -41,15 +41,14 @@ export const translations = {
         featureDeliveryDescription: "BRINGING OUR FRESH AND DELICIOUS TREATS STRAIGHT TO YOUR DOOR – QUICK, EASY, AND HASSLE-FREE",
         featureDeliveryAlt: "Delivery Icon",
 
-        founderTitle: "¡THANKS FOR BEING HERE!",
+        founderTitle: "THANKS FOR BEING HERE!",
         founderParagraph1: "HEY! I'M VIVIANA, THE FOUNDER OF FRUITY FLAKES, AND I JUST WANTED TO SAY A MASSIVE THANK YOU FOR STOPPING BY, PLACING YOUR ORDER AND SUPPORTING THIS FLAVOUR-PACKED DREAM. EVERY BITE OF FRUIT WE SLICE, EVERY RECIPE WE CREATE AND EVERY SMILE WE SHARE FROM OUR FOOD TRUCK IS MADE WITH LOVE AND A WHOLE LOTTA CULTURE.",
         founderParagraph2: "FRUITY FLAKES WAS BORN TO BRING PEOPLE TOGETHER, BRIGHTEN YOUR DAY, AND SERVE UP MOMENTS WORTH SAVOURING. THANKS FOR CHOOSING US, FOR TRUSTING OUR FLAVOURS, AND FOR BEING PART OF THIS RIDE.",
         founderParagraph3: "WE'LL KEEP THE GOOD VIBES AND BOLD FLAVOURS COMING – PROMISE!",
         founderSignature: "WITH LOVE, VIVI 💛",
         founderAlt: "Founder Viviana",
 
-        //events
-
+        // Events
         eventsTitle: "FRUITY FLAKES CATERING & EVENTS",
         eventsDescription: "WE BRING THE FRESH, UNIQUE FLAVOURS OF FRUITY FLAKES TO YOUR SPECIAL EVENTS! OUR CUSTOMISED CATERING SERVICE OFFERS ALL YOUR FAVOURITE TREATS, PERFECT FOR PARTIES, CORPORATE GATHERINGS, AND CELEBRATIONS. WE TAKE CARE OF EVERY DETAIL SO YOU CAN ENJOY A DELICIOUS AND VIBRANT EXPERIENCE. LET US MAKE YOUR EVENT UNFORGETTABLE!",
         orderNowButton: "ORDER NOW",
@@ -66,8 +65,6 @@ export const translations = {
         menuTitle: "FROM OUR FOOD TRUCK TO YOUR DOORSTEP!",
         menuSubtitle: "NOW YOU CAN ENJOY FRUITY FLAKES WHEREVER YOU ARE!",
         menuDescription: "OUR ORDERING SYSTEM LETS YOU GET YOUR FAVOURITE TREATS DELIVERED STRAIGHT TO YOUR DOORSTEP.",
-        splashAlt: "Decorative splash",
-        addToCart: "Add to cart",
         close: "Close",
         price: "Price",
         products: {
@@ -108,10 +105,17 @@ export const translations = {
                 description: "Sweet and tangy tropical juice blend served chilled with fresh fruit slices."
             },
             waffer: {
-                name: "Waffer",
+                name: "Waffle",
                 description: "Crispy waffle sandwich filled with cream, fruits, and chocolate drizzle."
             }
         },
+
+        communityTitle: "OUR COMMUNITY  ",
+        communitySubtitle: "FOLLOW US ON SOCIALS FOR MORE FLAVOUR-PACKED FUN!",
+        instagramHandle: "@FRUITTYFLAKESAU",
+        facebookHandle: "FRUITTY FLAKES",
+        tiktokHandle: "@FRUITTYFLAKESAU",
+        youtubeHandle: "@FRUITTYFLAKESAU",
 
         // Language names (for dropdown)
         languages: {
@@ -169,11 +173,11 @@ export const translations = {
         founderSignature: "CON AMOR, VIVI 💛",
         founderAlt: "Fundadora Viviana",
 
-        //events
+        // Events
         eventsTitle: "FRUITY FLAKES CATERING & EVENTOS",
         eventsDescription: "¡LLEVAMOS LOS SABORES FRESCOS Y ÚNICOS DE FRUITY FLAKES A TUS EVENTOS ESPECIALES! NUESTRO SERVICIO DE CATERING PERSONALIZADO OFRECE TODOS TUS FAVORITOS, PERFECTOS PARA FIESTAS, REUNIONES CORPORATIVAS Y CELEBRACIONES. NOS ENCARGAMOS DE CADA DETALLE PARA QUE PUEDAS DISFRUTAR DE UNA EXPERIENCIA DELICIOSA Y VIBRANTE. ¡DEJANOS HACER TU EVENTO INOLVIDABLE!",
         orderNowButton: "RESERVAR AHORA",
-        whatsappMessage: "Hola, estoy interesado en contratar un evento con Fruity Flakes 🍓🎉",
+        whatsappMessage: "Hola, estoy interesado/a en contratar un evento con Fruity Flakes 🍓🎉",
         splashAlt: "Salpicadura decorativa",
         eventAlt: "Imagen de evento",
         zoomedImageAlt: "Imagen de evento ampliada",
@@ -184,55 +188,60 @@ export const translations = {
         giftCardDescription: "Una selección de nuestros mejores productos, bellamente empaquetados",
 
         menuTitle: "¡DE NUESTRO FOOD TRUCK A TU PUERTA!",
-        menuSubtitle: "¡AHORA PUEDES DISFRUTAR FRUITY FLAKES DONDEQUIERA QUE ESTÉS!",
+        menuSubtitle: "¡AHORA PUEDES DISFRUTAR FRUITY FLAKES DONDE QUIERA QUE ESTÉS!",
         menuDescription: "NUESTRO SISTEMA DE PEDIDOS TE PERMITE RECIBIR TUS GOLOSINAS FAVORITAS DIRECTAMENTE EN TU DOMICILIO.",
-        splashAlt: "Salpicadura decorativa",
-        addToCart: "Añadir al carrito",
         close: "Cerrar",
         price: "Precio",
         products: {
-          arancini: {
-            name: "Arancini",
-            description: "Bolitas de risotto fritas doradas con un centro cremoso y quesoso."
-          },
-          chickenParmi: {
-            name: "Sandwich de Pollo Parmesano",
-            description: "Pan panini de pavo, pechuga de pollo empanizada y frita, cubierta con salsa marinara casera, espinacas, mozzarella y queso parmesano."
-          },
-          empanadas: {
-            name: "Empanadas",
-            description: "Deliciosas empanadas caseras rellenas de carne sabrosa y especias, horneadas a la perfección."
-          },
-          fruitSalad: {
-            name: "Ensalada de Frutas",
-            description: "Mezcla de frutas frescas con muesli, queso, yogur, crema y opcionalmente helado de vainilla."
-          },
-          fruitySnowCone: {
-            name: "Cono de Nieve Frutal",
-            description: "Hielo raspado refrescante con jarabes frutales vibrantes. ¡Perfecto para los días de verano!"
-          },
-          snowCoffee: {
-            name: "Café de Nieve",
-            description: "Bebida fría mezcla de café y caramelo. Una fusión perfecta de sabores de café con notas dulces de caramelo."
-          },
-          snowCone: {
-            name: "Cono de Nieve",
-            description: "Cono de nieve clásico con jarabe saborizado en varios colores y sabores."
-          },
-          steakSanga: {
-            name: "Sandwich de Carne",
-            description: "Jugoso sandwich de carne a la parrilla con tomate, lechuga y salsas sabrosas."
-          },
-          tropicalPunch: {
-            name: "Ponche de Frutas Tropicales",
-            description: "Mezcla dulce y ácida de jugos tropicales servida fría con rodajas de frutas frescas."
-          },
-          waffer: {
-            name: "Waffle",
-            description: "Sandwich de waffle crujiente relleno de crema, frutas y baño de chocolate."
-          }
+            arancini: {
+                name: "Arancini",
+                description: "Bolitas de risotto fritas doradas con un centro cremoso y quesoso."
+            },
+            chickenParmi: {
+                name: "Sandwich de Pollo Parmesano",
+                description: "Pan panini de pavo, pechuga de pollo empanizada y frita, cubierta con salsa marinara casera, espinacas, mozzarella y queso parmesano."
+            },
+            empanadas: {
+                name: "Empanadas",
+                description: "Deliciosas empanadas caseras rellenas de carne sabrosa y especias, horneadas a la perfección."
+            },
+            fruitSalad: {
+                name: "Ensalada de Frutas",
+                description: "Mezcla de frutas frescas con muesli, queso, yogur, crema y opcionalmente helado de vainilla."
+            },
+            fruitySnowCone: {
+                name: "Cono de Nieve Frutal",
+                description: "Hielo raspado refrescante con jarabes frutales vibrantes. ¡Perfecto para los días de verano!"
+            },
+            snowCoffee: {
+                name: "Café de Nieve",
+                description: "Bebida fría mezcla de café y caramelo. Una fusión perfecta de sabores de café con notas dulces de caramelo."
+            },
+            snowCone: {
+                name: "Cono de Nieve",
+                description: "Cono de nieve clásico con jarabe saborizado en varios colores y sabores."
+            },
+            steakSanga: {
+                name: "Sandwich de Carne",
+                description: "Jugoso sandwich de carne a la parrilla con tomate, lechuga y salsas sabrosas."
+            },
+            tropicalPunch: {
+                name: "Ponche de Frutas Tropicales",
+                description: "Mezcla dulce y ácida de jugos tropicales servida fría con rodajas de frutas frescas."
+            },
+            waffer: {
+                name: "Waffle",
+                description: "Sandwich de waffle crujiente relleno de crema, frutas y baño de chocolate."
+            }
         },
-        
+
+        communityTitle: "NUESTRA COMUNIDAD  ",
+        communitySubtitle: "¡SÍGUENOS EN REDES PARA MÁS DIVERSIÓN LLENA DE SABOR!",
+        instagramHandle: "@FRUITTYFLAKESAU",
+        facebookHandle: "FRUITTY FLAKES",
+        tiktokHandle: "@FRUITTYFLAKESAU",
+        youtubeHandle: "@FRUITTYFLAKESAU",
+
         // Language names
         languages: {
             en: "Inglés",
@@ -282,18 +291,18 @@ export const translations = {
         featureDeliveryDescription: "APPORTANT NOS DOUCEURS FRAÎCHES ET DÉLICIEUSES DIRECTEMENT À VOTRE PORTE – RAPIDE, FACILE ET SANS TRACAS",
         featureDeliveryAlt: "Icône de livraison",
 
-        founderTitle: "¡MERCI D'ÊTRE LÀ !",
+        founderTitle: "MERCI D'ÊTRE LÀ !",
         founderParagraph1: "SALUT ! JE SUIS VIVIANA, LA FONDATRICE DE FRUITY FLAKES, ET JE VOULAIS JUSTE VOUS DIRE UN IMMENSE MERCI D'ÊTRE PASSÉ, DE PASSER VOTRE COMMANDE ET DE SOUTENIR CE RÊVE PLEIN DE SAVEUR. CHAQUE FRUIT QUE NOUS COUPONS, CHAQUE RECETTE QUE NOUS CRÉONS ET CHAQUE SOURIRE QUE NOUS PARTAGEONS DEPUIS NOTRE FOOD TRUCK EST FAIT AVEC AMOUR ET BEAUCOUP DE CULTURE.",
         founderParagraph2: "FRUITY FLAKES EST NÉ POUR RASSEMBLER LES GENS, ÉGAYER VOTRE JOURNÉE ET OFFRIR DES MOMENTS QUI VALENT LA PEINE D'ÊTRE SAVOURÉS. MERCI DE NOUS AVOIR CHOISIS, D'AVOIR CONFIÉ EN NOS SAVEURS ET DE FAIRE PARTIE DE CETTE AVENTURE.",
         founderParagraph3: "NOUS CONTINUERONS À VOUS APPORTER DE BONNES VIBRATIONS ET DES SAVEURS AUDACIEUSES – PROMIS !",
         founderSignature: "AVEC AMOUR, VIVI 💛",
         founderAlt: "Fondatrice Viviana",
 
-        //Events
+        // Events
         eventsTitle: "FRUITY FLAKES CATERING & ÉVÉNEMENTS",
         eventsDescription: "NOUS APPORTONS LES SAVEURS FRAÎCHES ET UNIQUES DE FRUITY FLAKES À VOS ÉVÉNEMENTS SPÉCIAUX ! NOTRE SERVICE DE TRAITEUR PERSONNALISÉ VOUS OFFRE TOUS VOS FAVORIS, PARFAITS POUR LES FÊTES, LES RÉUNIONS D'ENTREPRISE ET LES CÉLÉBRATIONS. NOUS PRENONS SOIN DE CHAQUE DÉTAIL POUR QUE VOUS PUISSIEZ PROFITER D'UNE EXPÉRIENCE SAVOUREUSE ET DYNAMIQUE. LAISSEZ-NOUS RENDRE VOTRE ÉVÉNEMENT INOUBLIABLE !",
         orderNowButton: "RÉSERVER MAINTENANT",
-        whatsappMessage: "Bonjour, je suis intéressé par l'organisation d'un événement avec Fruity Flakes 🍓🎉",
+        whatsappMessage: "Bonjour, je suis intéressé(e) par l'organisation d'un événement avec Fruity Flakes �🎉",
         splashAlt: "Décoration éclaboussure",
         eventAlt: "Image d'événement",
         zoomedImageAlt: "Image zoomée de l'événement",
@@ -306,8 +315,6 @@ export const translations = {
         menuTitle: "DE NOTRE FOOD TRUCK À VOTRE PORTE !",
         menuSubtitle: "MAINTENANT VOUS POUVEZ PROFITER DE FRUITY FLAKES OÙ QUE VOUS SOYEZ !",
         menuDescription: "NOTRE SYSTÈME DE COMMANDE VOUS PERMET DE RECEVOIR VOS DOUCEURS PRÉFÉRÉES DIRECTEMENT À VOTRE DOMICILE.",
-        splashAlt: "Éclaboussure décorative",
-        addToCart: "Ajouter au panier",
         close: "Fermer",
         price: "Prix",
         products: {
@@ -352,6 +359,13 @@ export const translations = {
                 description: "Sandwich de gaufres croustillantes fourrées à la crème, aux fruits et arrosées de chocolat."
             }
         },
+        communityTitle: "NOTRE COMMUNAUTÉ  ",
+        communitySubtitle: "SUIVEZ-NOUS SUR LES RÉSEAUX POUR PLUS DE PLAISIR PLEIN DE SAVEUR!",
+        instagramHandle: "@FRUITTYFLAKESAU",
+        facebookHandle: "FRUITTY FLAKES",
+        tiktokHandle: "@FRUITTYFLAKESAU",
+        youtubeHandle: "@FRUITTYFLAKESAU",
+
         // Language names
         languages: {
             en: "Anglais",
@@ -401,14 +415,14 @@ export const translations = {
         featureDeliveryDescription: "WIR BRINGEN UNSERE FRISCHEN UND KÖSTLICHEN LEKKEREIEN DIREKT ZU IHNEN NACH HAUSE – SCHNELL, EINFACH UND OHNE UMWEGE",
         featureDeliveryAlt: "Lieferungssymbol",
 
-        founderTitle: "¡DANKE, DASS IHR HIER SEID!",
+        founderTitle: "DANKE, DASS IHR HIER SEID!",
         founderParagraph1: "HALLO! ICH BIN VIVIANA, DIE GRÜNDERIN VON FRUITY FLAKES, UND ICH WOLLTE MICH NUR GANZ HERZLICH BEDANKEN, DASS IHR VORBEISCHAUEN, BESTELLEN UND DIESEN GESCHMACKVOLLEN TRAUM UNTERSTÜTZEN. JEDES STÜCK OBST, DAS WIR SCHNEIDEN, JEDES REZEPT, DAS WIR KREIEREN, UND JEDES LÄCHELN, DAS WIR VON UNSEREM FOOD TRUCK AUS TEILEN, IST MIT LIEBE UND VIEL KULTUR GEMACHT.",
         founderParagraph2: "FRUITY FLAKES ENTSTAND, UM MENSCHEN ZUSAMMENZUBRINGEN, EUREN TAG ZU ERHELLEN UND MOMENTE ZU SERVIEREN, DIE ES WERT SIND, GENOSSEN ZU WERDEN. DANKE, DASS IHR UNS GEWÄHLT HABT, UNSEREN AROMEN VERTRAUT UND TEIL DIESER REISE SEID.",
         founderParagraph3: "WIR WERDEN WEITERHIN GUTE VIBES UND MUTIGE AROMEN BRINGEN – VERSPROCHEN!",
         founderSignature: "MIT LIEBE, VIVI 💛",
         founderAlt: "Gründerin Viviana",
 
-        //Events
+        // Events
         eventsTitle: "FRUITY FLAKES CATERING & VERANSTALTUNGEN",
         eventsDescription: "WIR BRINGEN DIE FRISCHEN, EINZIGARTIGEN AROMEN VON FRUITY FLAKES ZU IHREN BESONDEREN VERANSTALTUNGEN! UNSER MAßGESCHNEIDERTER CATERING-SERVICE BIETET ALLE IHRE LIEBLINGSLEKKEREIEN, PERFEKT FÜR PARTYS, FIRMENVERANSTALTUNGEN UND FEIERN. WIR KÜMMERN UNS UM JEDES DETAIL, DAMIT SIE EINEN KÖSTLICHEN UND DYNAMISCHEN GENUSS ERLEBEN KÖNNEN. LASSEN SIE UNS IHRE VERANSTALTUNG UNVERGESSLICH MACHEN!",
         orderNowButton: "JETZT BUCHEN",
@@ -422,13 +436,10 @@ export const translations = {
         giftCardTitle: "GESCHENKKARTE",
         giftCardDescription: "Eine Auswahl unserer besten Produkte, wunderschön verpackt",
 
-
-        //menu
+        // Menu
         menuTitle: "VON UNSEREM FOOD TRUCK BIS ZU IHNEN NACH HAUSE!",
         menuSubtitle: "JETZT KÖNNEN SIE FRUITY FLAKES ÜBERALL GENIEßEN!",
         menuDescription: "UNSER BESTELLSYSTEM LIEFERT IHRE LIEBLINGSLEKKEREIEN DIREKT ZU IHNEN NACH HAUSE.",
-        splashAlt: "Dekorative Spritzer",
-        addToCart: "In den Warenkorb",
         close: "Schließen",
         price: "Preis",
         products: {
@@ -473,6 +484,13 @@ export const translations = {
                 description: "Knuspriges Waffelsandwich gefüllt mit Sahne, Früchten und Schokoladenguss."
             }
         },
+        communityTitle: "UNSERE COMMUNITY  ",
+        communitySubtitle: "FOLGT UNS IN DEN SOCIAL MEDIAS FÜR MEHR GESCHMACKVOLLEN SPAß!",
+        instagramHandle: "@FRUITTYFLAKESAU",
+        facebookHandle: "FRUITTY FLAKES",
+        tiktokHandle: "@FRUITTYFLAKESAU",
+        youtubeHandle: "@FRUITTYFLAKESAU",
+
         // Language names
         languages: {
             en: "Englisch",

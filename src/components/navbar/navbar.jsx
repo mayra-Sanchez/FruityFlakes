@@ -36,7 +36,7 @@ const Navbar = ({ selectedLanguage = 'en', onLanguageChange }) => {
     const t = useMemo(() => translations[selectedLanguage] || translations['en'], [selectedLanguage]);
 
     // Store location coordinates
-    const storeLocation = useMemo(() => [-31.9505, 115.8605], []);
+    const storeLocation = useMemo(() => [-31.8954, 115.7645], []);
     const storeName = t.storeName;
 
     // Memoize languages list
@@ -123,10 +123,10 @@ const Navbar = ({ selectedLanguage = 'en', onLanguageChange }) => {
             cartItems.map(item => `✔ ${item.name} x${item.quantity} - $${item.price * item.quantity}`).join('%0A') +
             '%0A%0A' + t.total + ': $' + total
         );
-
-        const whatsappUrl = `https://wa.me/?text=${cartMessage}`;
+    
+        const whatsappUrl = `https://wa.me/61432360084?text=${cartMessage}`;
         window.open(whatsappUrl, '_blank');
-
+    
         localStorage.removeItem('cart');
         setCartItems([]);
         setCartCount(0);

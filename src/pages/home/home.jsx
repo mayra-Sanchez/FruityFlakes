@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css';
-import video from '../../assets/video/video_inicial.mov';
+import video from '../../assets/video/video_inicial.mp4'; // Ensure MP4 format
 
 const Home = () => {
     return (
